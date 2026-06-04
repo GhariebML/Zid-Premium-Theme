@@ -29,10 +29,66 @@
 
   <!-- Presentation Header (Not part of the actual theme) -->
   <div class="presentation-header">
-    <h3 style="margin-bottom: 8px;">Zid Premium Theme — Client Presentation</h3>
+    <h3 style="margin-bottom: 8px;">Zenith Commerce — Premium Zid Theme</h3>
     <div class="mode-tabs">
       <button class="mode-tab active" data-target="view-live">النسخة التفاعلية الحية</button>
-      <button class="mode-tab" data-target="view-showcase">معرض نماذج التصميم (Mockups)</button>
+      <button class="mode-tab" data-target="view-showcase">معرض التصميم والنظام (PDF Export)</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h2 style="margin: 0;">القائمة</h2>
+        <button class="icon-btn" id="close-mobile-menu" style="box-shadow: none;"><i class="ph ph-x"></i></button>
+      </div>
+      <a href="index.html" class="nav-link" style="padding: 16px 0; border-bottom: 1px solid var(--color-border);">الرئيسية</a>
+      <a href="clothing.html" class="nav-link" style="padding: 16px 0; border-bottom: 1px solid var(--color-border);">الملابس</a>
+      <a href="electronics.html" class="nav-link" style="padding: 16px 0; border-bottom: 1px solid var(--color-border);">الإلكترونيات</a>
+      <a href="offers.html" class="nav-link text-accent" style="padding: 16px 0;">العروض والتخفيضات</a>
+    </div>
+  </div>
+
+  <!-- Configurator Sidebar (Mockup) -->
+  <div class="configurator-sidebar" id="configurator-sidebar">
+    <div class="config-toggle" id="config-toggle">
+      <i class="ph ph-sliders"></i>
+    </div>
+    <div class="config-header">
+      Zid Theme Settings
+    </div>
+    <div class="config-body">
+      <div class="config-item">
+        <label>Primary Color</label>
+        <div class="color-picker" id="color-picker">
+          <div class="color-dot active" style="background-color: #3b82f6;" data-color="#3b82f6"></div>
+          <div class="color-dot" style="background-color: #10b981;" data-color="#10b981"></div>
+          <div class="color-dot" style="background-color: #f43f5e;" data-color="#f43f5e"></div>
+          <div class="color-dot" style="background-color: #8b5cf6;" data-color="#8b5cf6"></div>
+          <div class="color-dot" style="background-color: #111827;" data-color="#111827"></div>
+        </div>
+      </div>
+      <div class="config-item" style="margin-top: 24px;">
+        <label>Typography</label>
+        <select style="width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: 4px;">
+          <option>IBM Plex Sans Arabic</option>
+          <option>Cairo</option>
+          <option>Tajawal</option>
+        </select>
+      </div>
+      <div class="config-item" style="margin-top: 24px;">
+        <label>Logo Upload</label>
+        <button style="width: 100%; padding: 8px; border: 1px dashed var(--color-text-muted); background: transparent; border-radius: 4px; color: var(--color-text-muted); cursor: pointer;">
+          <i class="ph ph-upload-simple"></i> Upload SVG/PNG
+        </button>
+      </div>
+      <div class="config-item" style="margin-top: 24px;">
+        <label>Toggle Sections</label>
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--color-text);"><input type="checkbox" checked> Flash Sale</label>
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--color-text); margin-top: 8px;"><input type="checkbox" checked> Instagram Feed</label>
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--color-text); margin-top: 8px;"><input type="checkbox" checked> Testimonials</label>
+      </div>
     </div>
   </div>
 
@@ -49,10 +105,52 @@
     <!-- 2. Header -->
     <header class="header">
       <div class="container">
-        <div class="logo">LUXE STORE</div>
+        <div style="display: flex; align-items: center; gap: var(--space-4);">
+          <button class="icon-btn hamburger-btn" id="open-mobile-menu" style="box-shadow: none; background: transparent; padding: 0; width: auto;"><i class="ph ph-list"></i></button>
+          <div class="logo">LUXE STORE</div>
+        </div>
         <nav class="nav-links">
-          <a href="index.html" class="nav-link">الرئيسية</a>
-          <a href="clothing.html" class="nav-link">الملابس</a>
+          <a href="index.html" class="nav-link text-brand" style="border-bottom: 2px solid currentColor;">الرئيسية</a>
+          
+          <div class="has-mega-menu">
+            <a href="clothing.html" class="nav-link" style="padding-bottom: var(--space-4);">الملابس <i class="ph ph-caret-down" style="font-size: 12px;"></i></a>
+            <!-- Mega Menu -->
+            <div class="mega-menu">
+              <div class="container mega-menu-grid">
+                <div class="mega-menu-col">
+                  <h4>الرجال</h4>
+                  <ul>
+                    <li><a href="#">قمصان وتيشيرتات</a></li>
+                    <li><a href="#">بناطيل وشورتات</a></li>
+                    <li><a href="#">جاكيتات ومعاطف</a></li>
+                    <li><a href="#">ملابس رياضية</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-col">
+                  <h4>النساء</h4>
+                  <ul>
+                    <li><a href="#">فساتين وتنانير</a></li>
+                    <li><a href="#">بلايز وقمصان</a></li>
+                    <li><a href="#">عبايات وجلابيات</a></li>
+                    <li><a href="#">حقائب وإكسسوارات</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-col">
+                  <h4>الأطفال</h4>
+                  <ul>
+                    <li><a href="#">ملابس أولاد</a></li>
+                    <li><a href="#">ملابس بنات</a></li>
+                    <li><a href="#">مواليد ورضع</a></li>
+                    <li><a href="#">أحذية أطفال</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-col">
+                  <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Promo" style="border-radius: var(--radius-sm); height: 100%; object-fit: cover;">
+                </div>
+              </div>
+            </div>
+          </div>
+
           <a href="electronics.html" class="nav-link">الإلكترونيات</a>
           <a href="offers.html" class="nav-link text-accent">العروض</a>
         </nav>
@@ -84,7 +182,23 @@
       </div>
     </section>
 
-    <!-- 4. Featured Categories -->
+    <!-- 4. Brand Logos (NEW) -->
+    <section class="section-padding bg-white border-bottom" style="border-bottom: 1px solid var(--color-border-light);">
+      <div class="container animate-on-scroll">
+        <p class="text-center text-muted" style="font-weight: 600; margin-bottom: var(--space-6);">نثق بأفضل العلامات التجارية العالمية</p>
+        <div class="brand-logos">
+          <!-- Placeholder Logos using simple shapes/text since actual SVGs would be too long -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Brand 1">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Brand 2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Brand 3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Brand 4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Brand 5">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" alt="Brand 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Featured Categories -->
     <section class="section-padding bg-section">
       <div class="container">
         <h2 class="section-title text-center animate-on-scroll">تسوق حسب الفئة</h2>
@@ -309,31 +423,78 @@
       </div>
     </section>
 
-    <!-- 8. Why Choose Us -->
+    <!-- 9. Why Choose Us -->
     <section class="section-padding bg-section">
       <div class="container">
         <h2 class="section-title text-center animate-on-scroll">لماذا تتسوق معنا؟</h2>
         <div class="features-grid animate-on-scroll delay-100">
-          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+          <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
             <div class="feature-icon"><i class="ph ph-truck"></i></div>
             <h3>شحن سريع</h3>
             <p class="text-muted">توصيل خلال 24 ساعة لجميع مناطق المملكة.</p>
           </div>
-          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+          <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
             <div class="feature-icon"><i class="ph ph-arrows-clockwise"></i></div>
             <h3>إرجاع مجاني</h3>
             <p class="text-muted">استرجاع مجاني وسهل خلال 14 يوماً من الاستلام.</p>
           </div>
-          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+          <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
             <div class="feature-icon"><i class="ph ph-shield-check"></i></div>
             <h3>دفع آمن 100%</h3>
             <p class="text-muted">مدفوعاتك محمية بأحدث تقنيات التشفير.</p>
           </div>
-          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+          <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
             <div class="feature-icon"><i class="ph ph-headset"></i></div>
             <h3>دعم فني 24/7</h3>
             <p class="text-muted">فريقنا متواجد دائماً لخدمتك والرد على استفساراتك.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Customer Reviews (NEW) -->
+    <section class="section-padding bg-white">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">آراء عملائنا المميزين</h2>
+        <div class="reviews-grid animate-on-scroll delay-100">
+          <div class="review-card hover-lift">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"تجربة تسوق أكثر من رائعة! جودة المنتجات ممتازة والتوصيل كان أسرع مما توقعت. التغليف كان فاخراً جداً."</p>
+            <p class="review-author">— أحمد محمد</p>
+          </div>
+          <div class="review-card hover-lift">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"هذا هو متجري المفضل الآن. خدمة العملاء متجاوبة جداً وتصميم الموقع يجعل عملية الشراء سهلة وممتعة."</p>
+            <p class="review-author">— سارة عبدالرحمن</p>
+          </div>
+          <div class="review-card hover-lift">
+            <div class="review-stars">⭐⭐⭐⭐☆</div>
+            <p class="review-text">"حصلت على المنتجات مطابقة تماماً للوصف والصور. الخصومات في المتجر حقيقية والتجربة ممتازة بشكل عام."</p>
+            <p class="review-author">— فهد العتيبي</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Instagram Gallery (NEW) -->
+    <section class="section-padding" style="padding-bottom: 0;">
+      <h2 class="section-title text-center animate-on-scroll">تابعنا على إنستغرام</h2>
+      <div class="insta-grid animate-on-scroll delay-100">
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instagram 1">
+          <div class="insta-overlay"><i class="ph ph-instagram-logo"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instagram 2">
+          <div class="insta-overlay"><i class="ph ph-instagram-logo"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instagram 3">
+          <div class="insta-overlay"><i class="ph ph-instagram-logo"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instagram 4">
+          <div class="insta-overlay"><i class="ph ph-instagram-logo"></i></div>
         </div>
       </div>
     </section>
@@ -424,12 +585,50 @@
       </div>
     </div>
 
+    <!-- Mobile Sticky Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+      <div class="mobile-bottom-nav-inner">
+        <a href="index.html" class="bottom-nav-item active">
+          <i class="ph ph-house"></i>
+          <span>الرئيسية</span>
+        </a>
+        <a href="clothing.html" class="bottom-nav-item">
+          <i class="ph ph-squares-four"></i>
+          <span>الأقسام</span>
+        </a>
+        <div class="bottom-nav-item" onclick="document.getElementById('cart-trigger').click()" style="cursor: pointer;">
+          <i class="ph ph-shopping-cart"></i>
+          <span>السلة</span>
+        </div>
+        <a href="#" class="bottom-nav-item">
+          <i class="ph ph-user"></i>
+          <span>حسابي</span>
+        </a>
+      </div>
+    </div>
+
   </main>
 
   <!-- VIEW 2: DESIGN MOCKUPS SHOWCASE -->
   <main id="view-showcase" class="view-mode">
     <div class="mockup-gallery">
       <div class="container" style="max-width: 1000px;">
+        
+        <!-- PDF Proposal Header -->
+        <div class="pdf-proposal-header text-center">
+          <h1 style="margin-bottom: 8px; font-size: 2.5rem; letter-spacing: -1px;">Custom Zid Theme Concept Proposal</h1>
+          <p class="text-muted" style="font-size: 1.25rem; margin-bottom: 32px;">Prepared for: <strong>[Client Name]</strong> | Designed by: <strong>Mohamed Gharieb</strong></p>
+          
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 24px;">
+            <span style="background: var(--color-brand-light); color: var(--color-brand); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.875rem;">Modern RTL Experience</span>
+            <span style="background: var(--color-brand-light); color: var(--color-brand); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.875rem;">Responsive Design</span>
+            <span style="background: var(--color-brand-light); color: var(--color-brand); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.875rem;">Modular Zid Sections</span>
+            <span style="background: var(--color-brand-light); color: var(--color-brand); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.875rem;">Fully Customizable</span>
+            <span style="background: var(--color-brand-light); color: var(--color-brand); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.875rem;">Optimized for Performance</span>
+            <span style="background: var(--color-brand-light); color: var(--color-brand); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.875rem;">Ready for Figma-to-Zid</span>
+          </div>
+        </div>
+
         <h2 class="text-center" style="margin-bottom: var(--space-4);">استعراض نماذج التصميم المبدئية</h2>
         <p class="text-center text-muted" style="margin-bottom: var(--space-12);">هذه النماذج عالية الدقة تم توليدها لتوضيح هوية الثيم واتجاه التصميم (Design Direction) قبل برمجتها.</p>
         

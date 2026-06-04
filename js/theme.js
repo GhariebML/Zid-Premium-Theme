@@ -30,6 +30,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Mobile Menu Logic
+  const openMobileMenuBtn = document.getElementById('open-mobile-menu');
+  const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+  if (openMobileMenuBtn && closeMobileMenuBtn && mobileMenuOverlay) {
+    openMobileMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+
+    closeMobileMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Close when clicking outside
+    mobileMenuOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Configurator Sidebar Logic
+  const configToggle = document.getElementById('config-toggle');
+  const configuratorSidebar = document.getElementById('configurator-sidebar');
+  const colorDots = document.querySelectorAll('.color-dot');
+
+  if (configToggle && configuratorSidebar) {
+    configToggle.addEventListener('click', () => {
+      configuratorSidebar.classList.toggle('active');
+    });
+  }
+
+  if (colorDots) {
+    colorDots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        // Remove active class from all
+        colorDots.forEach(d => d.classList.remove('active'));
+        // Add active to clicked
+        e.target.classList.add('active');
+        // Update CSS variable
+        const newColor = e.target.getAttribute('data-color');
+        document.documentElement.style.setProperty('--color-brand', newColor);
+      });
+    });
+  }
+
   // Hover effects for cursor on interactive elements
   const interactables = document.querySelectorAll('a, button, .bento-item, .product-card');
   interactables.forEach(el => {

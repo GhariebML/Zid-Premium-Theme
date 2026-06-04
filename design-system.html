@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenith Commerce - Design System</title>
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .ds-section {
+      margin-bottom: 64px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .ds-title {
+      font-size: 24px;
+      margin-bottom: 24px;
+      color: var(--color-text);
+      font-weight: 700;
+    }
+    .ds-color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+    }
+    .ds-color-card {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .ds-color-swatch {
+      height: 100px;
+    }
+    .ds-color-info {
+      padding: 12px;
+      background: var(--color-bg);
+      font-size: 12px;
+    }
+    .ds-typography-spec {
+      margin-bottom: 16px;
+      padding: 16px;
+      background: var(--color-section);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-section">
+
+  <!-- Header -->
+  <header class="header" style="position: static;">
+    <div class="container">
+      <div class="logo">ZENITH COMMERCE <span class="text-muted" style="font-size: 12px; font-weight: normal;">Design System</span></div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">العودة للرئيسية</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 40px;">
+    
+    <div class="ds-section">
+      <h2 class="ds-title">1. Color Palette (لوحة الألوان)</h2>
+      <div class="ds-color-grid">
+        <div class="ds-color-card">
+          <div class="ds-color-swatch" style="background: var(--color-brand);"></div>
+          <div class="ds-color-info">Brand Primary<br><strong style="color:var(--color-brand)">#3b82f6 (Blue)</strong></div>
+        </div>
+        <div class="ds-color-card">
+          <div class="ds-color-swatch" style="background: var(--color-accent);"></div>
+          <div class="ds-color-info">Accent<br><strong>#eab308 (Yellow)</strong></div>
+        </div>
+        <div class="ds-color-card">
+          <div class="ds-color-swatch" style="background: var(--color-text);"></div>
+          <div class="ds-color-info">Text Base<br><strong>#111827</strong></div>
+        </div>
+        <div class="ds-color-card">
+          <div class="ds-color-swatch" style="background: var(--color-text-muted);"></div>
+          <div class="ds-color-info">Text Muted<br><strong>#6b7280</strong></div>
+        </div>
+        <div class="ds-color-card">
+          <div class="ds-color-swatch" style="background: var(--color-bg);"></div>
+          <div class="ds-color-info">Background<br><strong>#ffffff</strong></div>
+        </div>
+        <div class="ds-color-card">
+          <div class="ds-color-swatch" style="background: var(--color-danger);"></div>
+          <div class="ds-color-info">Danger/Sale<br><strong>#ef4444</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds-section">
+      <h2 class="ds-title">2. Typography (الخطوط)</h2>
+      <div class="ds-typography-spec" style="font-size: var(--font-size-4xl); font-weight: 700;">
+        Display H1 - خط العناوين الكبيرة
+      </div>
+      <div class="ds-typography-spec" style="font-size: var(--font-size-2xl); font-weight: 700;">
+        Heading H2 - خط العناوين الفرعية
+      </div>
+      <div class="ds-typography-spec" style="font-size: var(--font-size-lg); font-weight: 600;">
+        Subtitle H3 - خط العناوين الصغيرة
+      </div>
+      <div class="ds-typography-spec" style="font-size: var(--font-size-base);">
+        Body Text - خط النصوص العادية للمقالات والوصف الدقيق للمنتجات. يتميز بالقراءة المريحة.
+      </div>
+      <div class="ds-typography-spec" style="font-size: var(--font-size-sm); color: var(--color-text-muted);">
+        Small Text - الخطوط الصغيرة للتواريخ والملاحظات الفرعية.
+      </div>
+    </div>
+
+    <div class="ds-section">
+      <h2 class="ds-title">3. Components (المكونات)</h2>
+      
+      <h3 style="margin-bottom: 16px;">Buttons (الأزرار)</h3>
+      <div style="display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap;">
+        <button class="btn">زر أساسي</button>
+        <button class="btn" style="background: transparent; color: var(--color-text); border: 1px solid var(--color-border);">زر ثانوي</button>
+        <button class="btn btn-add-cart" style="position: static; transform: none; opacity: 1;">زر إضافة للسلة</button>
+        <button class="icon-btn"><i class="ph ph-heart"></i></button>
+      </div>
+
+      <h3 style="margin-bottom: 16px;">Product Card (بطاقة المنتج)</h3>
+      <div style="max-width: 300px;">
+        <div class="product-card">
+          <div class="product-badge">%20 خصم</div>
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+            <div class="product-actions-overlay">
+              <button class="icon-btn"><i class="ph ph-heart"></i></button>
+              <button class="icon-btn"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-rating">⭐⭐⭐⭐☆ (12)</div>
+          <h3 class="product-title">حذاء رياضي متطور</h3>
+          <div class="product-price">
+            <span class="price-current">450 ر.س</span>
+            <span class="price-old">560 ر.س</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  
+  <script src="js/theme.js"></script>
+</body>
+</html>
