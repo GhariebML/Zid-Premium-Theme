@@ -811,6 +811,103 @@ body {
   transform: translateY(0);
 }
 
+/* --- FIX: Missing Section Styles & Layout --- */
+.brand-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+.brand-logos img {
+  height: 40px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(60%);
+  transition: all var(--transition-base);
+}
+.brand-logos img:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.05);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.review-card {
+  background: var(--color-bg-section);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.review-stars {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-4);
+}
+.review-text {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+.review-author {
+  font-weight: 700;
+  color: var(--color-brand);
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.insta-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.insta-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.insta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  color: white;
+  font-size: 32px;
+}
+.insta-item:hover img {
+  transform: scale(1.1);
+}
+.insta-item:hover .insta-overlay {
+  opacity: 1;
+}
+
+/* --- FIX: Responsiveness --- */
+@media (max-width: 1024px) {
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .insta-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .reviews-grid { grid-template-columns: 1fr; }
+  .brand-logos { justify-content: center; }
+}
+
 /* --- NEW ZENITH COMMERCE FEATURES --- */
 
 /* Mega Menu */
