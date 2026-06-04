@@ -1,4 +1,92 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // --- 0. PRELOADER ---
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    // Hide after 1.5s to ensure line animation completes
+    setTimeout(() => {
+      preloader.style.animation = 'preloaderFadeOut 0.5s ease forwards';
+      setTimeout(() => { preloader.remove(); }, 500);
+    }, 1500);
+  }
+
+  // --- 0. CUSTOM CURSOR ---
+  const cursorDot = document.getElementById('cursor-dot');
+  const cursorOutline = document.getElementById('cursor-outline');
+  
+  window.addEventListener('mousemove', (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+    
+    if (cursorDot && cursorOutline) {
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+      
+      // Slight delay for outline
+      cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+      }, { duration: 500, fill: "forwards" });
+    }
+  });
+
+  // Hover effects for cursor on interactive elements
+  const interactables = document.querySelectorAll('a, button, .bento-item, .product-card');
+  interactables.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      if (cursorOutline) cursorOutline.classList.add('cursor-hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      if (cursorOutline) cursorOutline.classList.remove('cursor-hover');
+    });
+  });
+
+  // --- 0. DARK MODE TOGGLE ---
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const body = document.documentElement;
+  
+  // Check local storage or system preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.setAttribute('data-theme', 'dark');
+    if (darkModeToggle) darkModeToggle.innerHTML = '<i class="ph ph-sun"></i>';
+  }
+  
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        darkModeToggle.innerHTML = '<i class="ph ph-moon"></i>';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        darkModeToggle.innerHTML = '<i class="ph ph-sun"></i>';
+      }
+    });
+  }
+
+  // --- 0. 3D TILT EFFECT (Vanilla Tilt) ---
+  if (typeof VanillaTilt !== 'undefined') {
+    VanillaTilt.init(document.querySelectorAll(".bento-item"), {
+      max: 10,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+      scale: 1.02
+    });
+    
+    VanillaTilt.init(document.querySelectorAll(".product-card"), {
+      max: 8,
+      speed: 400,
+      glare: false,
+      scale: 1.01
+    });
+  }
+
+  // Add shine class to primary buttons
+  document.querySelectorAll('.btn-primary').forEach(btn => btn.classList.add('btn-shine'));
+
   // 1. Tab Switcher Logic (Live Preview vs Mockup Showcase)
   const modeTabs = document.querySelectorAll('.mode-tab');
   const viewModes = document.querySelectorAll('.view-mode');

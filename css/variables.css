@@ -73,6 +73,44 @@
   --z-drawer: 200;
   --z-modal: 300;
   --z-toast: 400;
+  --z-preloader: 9999;
+  --z-cursor: 10000;
+}
+
+[data-theme="dark"] {
+  --color-primary:        #0f172a;
+  --color-primary-rgb:    15, 23, 42;
+  --color-brand:          #3b82f6;
+  --color-brand-hover:    #60a5fa;
+  --color-brand-light:    rgba(59, 130, 246, 0.1);
+  --color-accent:         #fbbf24;
+  --color-bg:             #020617;
+  --color-bg-section:     #0f172a;
+  --color-text:           #f8fafc;
+  --color-text-muted:     #94a3b8;
+  --color-border:         #1e293b;
+  --color-border-light:   #334155;
+  
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md:  0 4px 6px -1px rgba(0,0,0,0.4);
+  --shadow-lg:  0 10px 15px -3px rgba(0,0,0,0.5);
+  --shadow-xl:  0 20px 25px -5px rgba(0,0,0,0.6);
+  --shadow-hover: 0 12px 24px rgba(0,0,0,0.7);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand);
 }
 
 *, *::before, *::after {

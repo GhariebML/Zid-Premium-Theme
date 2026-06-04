@@ -14,6 +14,18 @@
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
+  
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <h2 class="preloader-text">LUXE STORE</h2>
+      <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
 
   <!-- Presentation Header (Not part of the actual theme) -->
   <div class="presentation-header">
@@ -48,6 +60,7 @@
         <div class="header-icons">
           <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-magnifying-glass"></i></button>
           <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-heart"></i></button>
+          <button class="icon-btn" id="dark-mode-toggle" style="box-shadow: none; background: transparent;"><i class="ph ph-moon"></i></button>
           <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-user"></i></button>
           <button class="icon-btn cart-icon" id="cart-trigger" style="box-shadow: none; background: transparent;">
             <i class="ph ph-shopping-cart"></i>
@@ -438,6 +451,7 @@
     </div>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
   <script src="js/theme.js"></script>
 </body>
 </html>

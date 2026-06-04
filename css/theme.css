@@ -21,13 +21,81 @@
 .text-muted { color: var(--color-text-muted); }
 .text-white { color: var(--color-bg); }
 
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .bg-white { background-color: var(--color-bg); }
 .bg-section { background-color: var(--color-bg-section); }
-.bg-dark { background-color: var(--color-primary); color: var(--color-bg); }
-.bg-brand { background-color: var(--color-brand); color: var(--color-bg); }
+.bg-dark { background-color: var(--color-primary); color: var(--color-text); }
+.bg-brand { background-color: var(--color-brand); color: #fff; }
 
 .section-padding { padding: var(--space-20) 0; }
 .section-title { margin-bottom: var(--space-12); font-size: var(--font-size-3xl); }
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: var(--color-primary);
+  z-index: var(--z-preloader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.preloader-content {
+  text-align: center;
+}
+.preloader-text {
+  color: white;
+  font-size: var(--font-size-4xl);
+  letter-spacing: 4px;
+  margin-bottom: var(--space-4);
+  animation: pulse 1.5s infinite;
+}
+.preloader-line {
+  height: 2px;
+  background: var(--color-accent);
+  width: 0%;
+  animation: lineExpand 1s ease forwards;
+}
+
+/* Custom Cursor */
+body {
+  cursor: none; /* Hide default cursor */
+}
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+.cursor-outline {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.5;
+}
+.cursor-hover {
+  width: 60px !important;
+  height: 60px !important;
+  background-color: rgba(245, 158, 11, 0.1);
+  opacity: 1 !important;
+}
 
 /* Buttons */
 .btn {
