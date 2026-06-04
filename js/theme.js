@@ -268,6 +268,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- PRO FEATURE: Quick View Modal ---
+  const qvOverlay = document.getElementById('quick-view-modal');
+  const qvClose = document.getElementById('quick-view-close');
+  const qvTriggers = document.querySelectorAll('.qv-trigger');
+
+  const openQuickView = (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // prevent clicking the card underneath
+    
+    // In a real scenario, we would fetch product data here based on an ID
+    // For now, we just open the modal with dummy data
+    if(qvOverlay) {
+      qvOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const closeQuickView = () => {
+    if(qvOverlay) {
+      qvOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  qvTriggers.forEach(btn => {
+    btn.addEventListener('click', openQuickView);
+  });
+
+  if (qvClose) qvClose.addEventListener('click', closeQuickView);
+  if (qvOverlay) {
+    qvOverlay.addEventListener('click', (e) => {
+      if (e.target === qvOverlay) closeQuickView();
+    });
+  }
+
+  // --- PRO FEATURE: Full Screen Search ---
+  const searchOverlay = document.getElementById('search-overlay');
+  const searchTrigger = document.getElementById('search-trigger');
+  const searchClose = document.getElementById('search-close');
+
+  if (searchTrigger && searchOverlay) {
+    searchTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      searchOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      // Focus input
+      setTimeout(() => {
+        const input = searchOverlay.querySelector('input');
+        if(input) input.focus();
+      }, 100);
+    });
+  }
+
+  if (searchClose && searchOverlay) {
+    searchClose.addEventListener('click', () => {
+      searchOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+
   // --- NEW: Animation & Micro-interactions ---
 
   // Initialize AOS
