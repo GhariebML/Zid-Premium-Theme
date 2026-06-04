@@ -125,7 +125,7 @@ body {
 }
 .btn-outline-dark {
   border: 2px solid var(--color-border);
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 .btn-outline-dark:hover {
   border-color: var(--color-primary);
@@ -165,7 +165,7 @@ body {
 .logo {
   font-size: var(--font-size-2xl);
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-text);
   letter-spacing: -1px;
 }
 .nav-links {
@@ -344,7 +344,7 @@ body {
   opacity: 1;
 }
 .icon-btn {
-  background: white;
+  background: var(--color-bg);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -352,7 +352,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-sm);
-  color: var(--color-primary);
+  color: var(--color-text);
   transition: all var(--transition-base);
 }
 .icon-btn:hover {
@@ -534,7 +534,7 @@ body {
   width: 400px;
   max-width: 100%;
   height: 100vh;
-  background: white;
+  background: var(--color-bg);
   z-index: calc(var(--z-drawer) + 1);
   transform: translateX(-100%);
   transition: transform var(--transition-slow);
@@ -667,7 +667,7 @@ body {
 .hotspot-dot {
   width: 20px;
   height: 20px;
-  background: white;
+  background: var(--color-bg);
   border-radius: 50%;
   position: relative;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -697,7 +697,7 @@ body {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  background: white;
+  background: var(--color-bg);
   padding: 8px;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
@@ -906,6 +906,28 @@ body {
 @media (max-width: 768px) {
   .reviews-grid { grid-template-columns: 1fr; }
   .brand-logos { justify-content: center; }
+}
+
+/* --- FIX: Dark Mode Overrides --- */
+[data-theme="dark"] .header {
+  background-color: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .product-actions-overlay {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+[data-theme="dark"] .mega-menu {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+[data-theme="dark"] .mobile-bottom-nav {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+[data-theme="dark"] .hotspot-tooltip {
+  background: var(--color-bg);
 }
 
 /* --- NEW ZENITH COMMERCE FEATURES --- */
