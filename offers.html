@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العروض والتخفيضات — LUXE STORE</title>
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <h2 class="preloader-text">LUXE STORE</h2>
+      <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">LUXE STORE</div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="clothing.html" class="nav-link">الملابس</a>
+        <a href="electronics.html" class="nav-link">الإلكترونيات</a>
+        <a href="offers.html" class="nav-link text-accent" style="border-bottom: 2px solid currentColor;">العروض</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-magnifying-glass"></i></button>
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-heart"></i></button>
+        <button class="icon-btn" id="dark-mode-toggle" style="box-shadow: none; background: transparent;"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-user"></i></button>
+        <button class="icon-btn cart-icon" id="cart-trigger" style="box-shadow: none; background: transparent;">
+          <i class="ph ph-shopping-cart"></i>
+          <span class="cart-badge">3</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="hero" style="height: 400px; min-height: 400px;">
+      <div class="hero-bg" style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.9) 0%, rgba(245, 158, 11, 0.9) 100%);"></div>
+      <div class="container relative z-10 text-center">
+        <div class="hero-content animate-fade-up" style="max-width: 800px; margin: 0 auto;">
+          <h1 class="hero-title">تخفيضات كبرى</h1>
+          <p class="hero-subtitle" style="color: white; font-size: var(--font-size-2xl); font-weight: bold; margin-bottom: var(--space-4);">وفر حتى 50% على تشكيلة مختارة</p>
+          
+          <div class="flash-sale-header justify-center" style="margin-top: var(--space-8);">
+            <div class="countdown">
+              <div class="time-box">00</div>
+              <div class="time-box">00</div>
+              <div class="time-box">00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discounted Products -->
+    <section class="section-padding bg-section">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">عروض لا تفوتك</h2>
+        <div class="product-grid animate-on-scroll delay-100">
+          
+          <div class="product-card">
+            <div class="product-badge" style="background: var(--color-danger); color: white;">%50 خصم</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (89)</div>
+            <h3 class="product-title">سماعات أبل إيربودز</h3>
+            <div class="product-price">
+              <span class="price-current text-danger">499 ر.س</span>
+              <span class="price-old">999 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge" style="background: var(--color-danger); color: white;">%30 خصم</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (210)</div>
+            <h3 class="product-title">حذاء نايك إير ماكس</h3>
+            <div class="product-price">
+              <span class="price-current text-danger">560 ر.س</span>
+              <span class="price-old">800 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge" style="background: var(--color-danger); color: white;">%25 خصم</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (112)</div>
+            <h3 class="product-title">فستان سهرة كلاسيكي</h3>
+            <div class="product-price">
+              <span class="price-current text-danger">450 ر.س</span>
+              <span class="price-old">600 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge" style="background: var(--color-danger); color: white;">%40 خصم</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (128)</div>
+            <h3 class="product-title">سماعات سوني لاسلكية</h3>
+            <div class="product-price">
+              <span class="price-current text-danger">300 ر.س</span>
+              <span class="price-old">500 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-4);">LUXE STORE</h3>
+          <p class="text-muted" style="margin-bottom: var(--space-6);">الوجهة الأولى للتسوق الإلكتروني في الشرق الأوسط.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUXE STORE. جميع الحقوق محفوظة.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملابس والأزياء — LUXE STORE</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <h2 class="preloader-text">LUXE STORE</h2>
+      <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">LUXE STORE</div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="clothing.html" class="nav-link text-accent" style="border-bottom: 2px solid currentColor;">الملابس</a>
+        <a href="electronics.html" class="nav-link">الإلكترونيات</a>
+        <a href="offers.html" class="nav-link">العروض</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-magnifying-glass"></i></button>
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-heart"></i></button>
+        <button class="icon-btn" id="dark-mode-toggle" style="box-shadow: none; background: transparent;"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-user"></i></button>
+        <button class="icon-btn cart-icon" id="cart-trigger" style="box-shadow: none; background: transparent;">
+          <i class="ph ph-shopping-cart"></i>
+          <span class="cart-badge">3</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="hero" style="height: 400px; min-height: 400px;">
+      <div class="hero-bg" style="background: linear-gradient(to right, rgba(17,24,39,0.9) 0%, rgba(17,24,39,0.4) 100%), url('https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
+      <div class="container relative z-10">
+        <div class="hero-content animate-fade-up">
+          <h1 class="hero-title text-gradient">أحدث صيحات الموضة</h1>
+          <p class="hero-subtitle">تشكيلة حصرية من أرقى الماركات العالمية لجميع الأذواق.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section-padding bg-section">
+      <div class="container">
+        <div class="bento-grid" style="grid-template-rows: 200px;">
+          <div class="bento-item bento-small">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Men">
+            <div class="bento-overlay"><h4>رجالي</h4></div>
+          </div>
+          <div class="bento-item bento-small">
+            <img src="https://images.unsplash.com/photo-1550614000-4b95d4ebf0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Women">
+            <div class="bento-overlay"><h4>نسائي</h4></div>
+          </div>
+          <div class="bento-item bento-small">
+            <img src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kids">
+            <div class="bento-overlay"><h4>أطفال</h4></div>
+          </div>
+          <div class="bento-item bento-small">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Shoes">
+            <div class="bento-overlay"><h4>أحذية</h4></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clothing Products -->
+    <section class="section-padding bg-white">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">التشكيلة الجديدة</h2>
+        <div class="product-grid animate-on-scroll delay-100">
+          
+          <div class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (56)</div>
+            <h3 class="product-title">تيشيرت قطن فاخر</h3>
+            <div class="product-price"><span class="price-current">120 ر.س</span></div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge">جديد</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (34)</div>
+            <h3 class="product-title">جاكيت خريفي أنيق</h3>
+            <div class="product-price"><span class="price-current">350 ر.س</span></div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (89)</div>
+            <h3 class="product-title">حذاء رياضي مريح</h3>
+            <div class="product-price"><span class="price-current">299 ر.س</span></div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge">%20 خصم</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (112)</div>
+            <h3 class="product-title">فستان سهرة كلاسيكي</h3>
+            <div class="product-price">
+              <span class="price-current">450 ر.س</span>
+              <span class="price-old">560 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-4);">LUXE STORE</h3>
+          <p class="text-muted" style="margin-bottom: var(--space-6);">الوجهة الأولى للتسوق الإلكتروني في الشرق الأوسط.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUXE STORE. جميع الحقوق محفوظة.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

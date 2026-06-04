@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإلكترونيات — LUXE STORE</title>
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <h2 class="preloader-text">LUXE STORE</h2>
+      <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">LUXE STORE</div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="clothing.html" class="nav-link">الملابس</a>
+        <a href="electronics.html" class="nav-link text-brand" style="border-bottom: 2px solid currentColor;">الإلكترونيات</a>
+        <a href="offers.html" class="nav-link">العروض</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-magnifying-glass"></i></button>
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-heart"></i></button>
+        <button class="icon-btn" id="dark-mode-toggle" style="box-shadow: none; background: transparent;"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-user"></i></button>
+        <button class="icon-btn cart-icon" id="cart-trigger" style="box-shadow: none; background: transparent;">
+          <i class="ph ph-shopping-cart"></i>
+          <span class="cart-badge">3</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="hero" style="height: 400px; min-height: 400px;">
+      <div class="hero-bg" style="background: linear-gradient(to right, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.5) 100%), url('https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
+      <div class="container relative z-10">
+        <div class="hero-content animate-fade-up">
+          <h1 class="hero-title text-gradient">تقنيات الغد، بين يديك اليوم</h1>
+          <p class="hero-subtitle">أحدث الأجهزة الذكية والملحقات التقنية بأفضل الأسعار المضمونة.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Electronics Products -->
+    <section class="section-padding bg-section">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">أجهزة ذكية متطورة</h2>
+        <div class="product-grid animate-on-scroll delay-100">
+          
+          <div class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (77)</div>
+            <h3 class="product-title">ساعة ذكية سيريس 8</h3>
+            <div class="product-price"><span class="price-current">1,499 ر.س</span></div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge">جديد</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (312)</div>
+            <h3 class="product-title">ماك بوك برو M2</h3>
+            <div class="product-price"><span class="price-current">6,500 ر.س</span></div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (128)</div>
+            <h3 class="product-title">سماعات سوني لاسلكية</h3>
+            <div class="product-price"><span class="price-current">350 ر.س</span></div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge" style="background: var(--color-danger); color: white;">بقي 2</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (45)</div>
+            <h3 class="product-title">كاميرا بولارويد</h3>
+            <div class="product-price"><span class="price-current">299 ر.س</span></div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-4);">LUXE STORE</h3>
+          <p class="text-muted" style="margin-bottom: var(--space-6);">الوجهة الأولى للتسوق الإلكتروني في الشرق الأوسط.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUXE STORE. جميع الحقوق محفوظة.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
