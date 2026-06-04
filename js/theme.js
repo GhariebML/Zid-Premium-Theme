@@ -385,5 +385,93 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   `;
   document.head.appendChild(style);
+  // --- PRODUCT PAGE SCRIPTS ---
+  
+  // Product Gallery Thumbnails
+  const thumbImgs = document.querySelectorAll('.thumb-img');
+  const mainProductImg = document.getElementById('main-product-img');
+  
+  if (thumbImgs.length > 0 && mainProductImg) {
+    thumbImgs.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        // Remove active class from all
+        thumbImgs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked
+        this.classList.add('active');
+        // Change main image src
+        mainProductImg.src = this.src.replace('&w=150', '&w=800'); // Assuming unsplash images
+      });
+    });
+  }
+
+  // Product Accordions
+  const accordions = document.querySelectorAll('.accordion-header');
+  accordions.forEach(acc => {
+    acc.addEventListener('click', function() {
+      const parent = this.parentElement;
+      const content = this.nextElementSibling;
+      
+      // Toggle active class
+      parent.classList.toggle('active');
+      
+      // Toggle max-height
+      if (parent.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+
+  // Color Swatches
+  const colorSwatches = document.querySelectorAll('.color-swatch');
+  const colorNameDisplay = document.getElementById('color-name');
+  colorSwatches.forEach(swatch => {
+    swatch.addEventListener('click', function() {
+      colorSwatches.forEach(s => s.classList.remove('active'));
+      this.classList.add('active');
+      if (colorNameDisplay) {
+        colorNameDisplay.textContent = this.getAttribute('data-color');
+      }
+    });
+  });
+
+  // Size Selector
+  const sizeBtns = document.querySelectorAll('.size-btn');
+  sizeBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      sizeBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Quantity Selector
+  const qtyMinus = document.getElementById('qty-minus');
+  const qtyPlus = document.getElementById('qty-plus');
+  const qtyInput = document.getElementById('qty-input');
+  
+  if (qtyMinus && qtyPlus && qtyInput) {
+    qtyMinus.addEventListener('click', () => {
+      let val = parseInt(qtyInput.value);
+      if (val > 1) qtyInput.value = val - 1;
+    });
+    qtyPlus.addEventListener('click', () => {
+      let val = parseInt(qtyInput.value);
+      if (val < parseInt(qtyInput.getAttribute('max'))) qtyInput.value = val + 1;
+    });
+  }
+
+  // Sticky Add to Cart
+  const stickyAddCart = document.getElementById('sticky-add-cart');
+  if (stickyAddCart) {
+    window.addEventListener('scroll', () => {
+      // Show sticky bar after scrolling down 500px (approx past main add to cart)
+      if (window.pageYOffset > 500) {
+        stickyAddCart.classList.add('visible');
+      } else {
+        stickyAddCart.classList.remove('visible');
+      }
+    });
+  }
 
 });
