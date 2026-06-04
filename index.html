@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zid Premium Theme — Pre-development Concept</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+  <!-- Icons (Phosphor Icons for a clean, premium look) -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Presentation Header (Not part of the actual theme) -->
+  <div class="presentation-header">
+    <h3 style="margin-bottom: 8px;">Zid Premium Theme — Client Presentation</h3>
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-target="view-live">النسخة التفاعلية الحية</button>
+      <button class="mode-tab" data-target="view-showcase">معرض نماذج التصميم (Mockups)</button>
+    </div>
+  </div>
+
+  <!-- VIEW 1: LIVE INTERACTIVE THEME PREVIEW -->
+  <main id="view-live" class="view-mode active">
+    
+    <!-- 1. Announcement Bar -->
+    <div class="announcement-bar">
+      <div class="announcement-content">
+        🚚 شحن مجاني على الطلبات فوق 200 ر.س | ⚡ خصم 10% للأعضاء الجدد | ✨ الدفع عند الاستلام متاح | 🚚 شحن مجاني على الطلبات فوق 200 ر.س
+      </div>
+    </div>
+
+    <!-- 2. Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">LUXE STORE</div>
+        <nav class="nav-links">
+          <a href="#" class="nav-link">الرئيسية</a>
+          <a href="#" class="nav-link">الملابس</a>
+          <a href="#" class="nav-link">الإلكترونيات</a>
+          <a href="#" class="nav-link">العروض</a>
+          <a href="#" class="nav-link text-accent">وصل حديثاً</a>
+        </nav>
+        <div class="header-icons">
+          <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-magnifying-glass"></i></button>
+          <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-heart"></i></button>
+          <button class="icon-btn" style="box-shadow: none; background: transparent;"><i class="ph ph-user"></i></button>
+          <button class="icon-btn cart-icon" id="cart-trigger" style="box-shadow: none; background: transparent;">
+            <i class="ph ph-shopping-cart"></i>
+            <span class="cart-badge">3</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. Hero Banner -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container relative z-10">
+        <div class="hero-content animate-fade-up">
+          <h1 class="hero-title">تسوق بأسلوب<br>مختلف ومميز</h1>
+          <p class="hero-subtitle">أحدث التصاميم العالمية وأفضل الإلكترونيات بأسعار استثنائية وتجربة تسوق لا تُنسى.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary hover-scale">تسوق الآن <i class="ph ph-arrow-left" style="margin-right: 8px;"></i></button>
+            <button class="btn btn-outline hover-scale" style="border-color: white; color: white;">اكتشف المجموعة</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Categories -->
+    <section class="section-padding bg-section">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">تسوق حسب الفئة</h2>
+        <div class="bento-grid animate-on-scroll delay-100">
+          <div class="bento-item bento-large-1">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics">
+            <div class="bento-overlay">
+              <h3>الإلكترونيات الذكية</h3>
+              <p>١٢٤ منتج</p>
+            </div>
+          </div>
+          <div class="bento-item bento-large-2">
+            <img src="https://images.unsplash.com/photo-1434389678369-182cb1490235?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clothing">
+            <div class="bento-overlay">
+              <h3>الأزياء العصرية</h3>
+              <p>٨٩ منتج</p>
+            </div>
+          </div>
+          <div class="bento-item bento-small">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Shoes">
+            <div class="bento-overlay">
+              <h4>الأحذية</h4>
+            </div>
+          </div>
+          <div class="bento-item bento-small">
+            <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Watches">
+            <div class="bento-overlay">
+              <h4>الساعات</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Flash Sale -->
+    <section class="section-padding bg-dark text-white">
+      <div class="container">
+        <div class="flash-sale-header animate-on-scroll">
+          <div>
+            <h2 class="section-title" style="margin-bottom: 0;">عروض اليوم ⚡</h2>
+            <p class="text-muted" style="margin-top: 8px;">تنتهي العروض خلال:</p>
+          </div>
+          <div class="countdown">
+            <div class="time-box">00</div>
+            <div class="time-box">00</div>
+            <div class="time-box">00</div>
+          </div>
+        </div>
+        
+        <div class="product-grid animate-on-scroll delay-100">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-badge">%30 خصم</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (128)</div>
+            <h3 class="product-title">سماعات سوني لاسلكية</h3>
+            <div class="product-price">
+              <span class="price-current">350 ر.س</span>
+              <span class="price-old">500 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus" style="margin-right: 4px;"></i></button>
+          </div>
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-badge">جديد</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (45)</div>
+            <h3 class="product-title">كاميرا بولارويد كلاسيكية</h3>
+            <div class="product-price">
+              <span class="price-current">299 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus" style="margin-right: 4px;"></i></button>
+          </div>
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-badge" style="background: var(--color-danger); color: white;">بقي 2</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (210)</div>
+            <h3 class="product-title">حذاء نايك إير ماكس</h3>
+            <div class="product-price">
+              <span class="price-current">650 ر.س</span>
+              <span class="price-old">800 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus" style="margin-right: 4px;"></i></button>
+          </div>
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-badge">%15 خصم</div>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (89)</div>
+            <h3 class="product-title">سماعات أبل إيربودز</h3>
+            <div class="product-price">
+              <span class="price-current">850 ر.س</span>
+              <span class="price-old">999 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus" style="margin-right: 4px;"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Best Sellers -->
+    <section class="section-padding bg-white">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">الأكثر مبيعاً</h2>
+        
+        <div class="filter-tabs animate-on-scroll">
+          <button class="filter-tab active" data-filter="all">الكل</button>
+          <button class="filter-tab" data-filter="electronics">إلكترونيات</button>
+          <button class="filter-tab" data-filter="clothes">ملابس</button>
+          <button class="filter-tab" data-filter="shoes">أحذية</button>
+        </div>
+
+        <div class="product-grid" id="best-sellers">
+          <!-- Item 1 (Electronics) -->
+          <div class="product-card" data-category="electronics">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (312)</div>
+            <h3 class="product-title">ماك بوك برو M2</h3>
+            <div class="product-price">
+              <span class="price-current">6,500 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+          <!-- Item 2 (Clothes) -->
+          <div class="product-card" data-category="clothes">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (56)</div>
+            <h3 class="product-title">تيشيرت قطن أساسي</h3>
+            <div class="product-price">
+              <span class="price-current">99 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+          <!-- Item 3 (Shoes) -->
+          <div class="product-card" data-category="shoes">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐⭐ (140)</div>
+            <h3 class="product-title">حذاء رياضي أخضر</h3>
+            <div class="product-price">
+              <span class="price-current">450 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+          <!-- Item 4 (Electronics) -->
+          <div class="product-card" data-category="electronics">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product">
+              <div class="product-actions-overlay">
+                <button class="icon-btn"><i class="ph ph-heart"></i></button>
+                <button class="icon-btn"><i class="ph ph-eye"></i></button>
+              </div>
+            </div>
+            <div class="product-rating">⭐⭐⭐⭐☆ (77)</div>
+            <h3 class="product-title">ساعة ذكية سيريس 8</h3>
+            <div class="product-price">
+              <span class="price-current">1,499 ر.س</span>
+            </div>
+            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Promo Banner -->
+    <section class="section-padding bg-white">
+      <div class="container animate-on-scroll">
+        <div class="promo-banner">
+          <div class="promo-content">
+            <h2 class="hero-title" style="font-size: var(--font-size-4xl);">أضف لمسة الأناقة<br>إلى حياتك اليومية</h2>
+            <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-6); opacity: 0.9;">
+              استمتع بخصم ٢٠٪ على طلبك الأول عند استخدام الكود <strong>WELCOME20</strong>
+            </p>
+            <button class="btn btn-outline hover-scale" style="border-color: white; color: white; background: rgba(255,255,255,0.1);">تسوق المجموعة <i class="ph ph-arrow-left" style="margin-right: 8px;"></i></button>
+          </div>
+          <div class="promo-image">
+            <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Promo" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Why Choose Us -->
+    <section class="section-padding bg-section">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">لماذا تتسوق معنا؟</h2>
+        <div class="features-grid animate-on-scroll delay-100">
+          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+            <div class="feature-icon"><i class="ph ph-truck"></i></div>
+            <h3>شحن سريع</h3>
+            <p class="text-muted">توصيل خلال 24 ساعة لجميع مناطق المملكة.</p>
+          </div>
+          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+            <div class="feature-icon"><i class="ph ph-arrows-clockwise"></i></div>
+            <h3>إرجاع مجاني</h3>
+            <p class="text-muted">استرجاع مجاني وسهل خلال 14 يوماً من الاستلام.</p>
+          </div>
+          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+            <div class="feature-icon"><i class="ph ph-shield-check"></i></div>
+            <h3>دفع آمن 100%</h3>
+            <p class="text-muted">مدفوعاتك محمية بأحدث تقنيات التشفير.</p>
+          </div>
+          <div class="feature-card hover-lift" style="background: white; padding: var(--space-8); border-radius: var(--radius-lg);">
+            <div class="feature-icon"><i class="ph ph-headset"></i></div>
+            <h3>دعم فني 24/7</h3>
+            <p class="text-muted">فريقنا متواجد دائماً لخدمتك والرد على استفساراتك.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-4);">LUXE STORE</h3>
+            <p class="text-muted" style="margin-bottom: var(--space-6);">الوجهة الأولى للتسوق الإلكتروني في الشرق الأوسط. نقدم لك أحدث صيحات الموضة والإلكترونيات بأفضل الأسعار.</p>
+            <div style="display: flex; gap: var(--space-4); font-size: 1.5rem; color: var(--color-text-muted);">
+              <i class="ph ph-instagram-logo hover-scale" style="cursor:pointer; color: white;"></i>
+              <i class="ph ph-twitter-logo hover-scale" style="cursor:pointer; color: white;"></i>
+              <i class="ph ph-facebook-logo hover-scale" style="cursor:pointer; color: white;"></i>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-title">روابط سريعة</h4>
+            <ul class="footer-links">
+              <li><a href="#">الرئيسية</a></li>
+              <li><a href="#">من نحن</a></li>
+              <li><a href="#">المدونة</a></li>
+              <li><a href="#">تواصل معنا</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">خدمة العملاء</h4>
+            <ul class="footer-links">
+              <li><a href="#">الأسئلة الشائعة</a></li>
+              <li><a href="#">سياسة الاسترجاع</a></li>
+              <li><a href="#">الشحن والتوصيل</a></li>
+              <li><a href="#">سياسة الخصوصية</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">النشرة البريدية</h4>
+            <p class="text-muted" style="font-size: var(--font-size-sm); margin-bottom: var(--space-4);">اشترك ليصلك كل جديد وعروضنا الحصرية.</p>
+            <div style="display: flex;">
+              <input type="email" placeholder="البريد الإلكتروني" style="padding: 12px; border: none; border-radius: 0 6px 6px 0; width: 100%;">
+              <button style="background: var(--color-brand); color: white; padding: 0 16px; border-radius: 6px 0 0 6px;">اشترك</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 LUXE STORE. جميع الحقوق محفوظة.</div>
+          <div style="font-size: 2rem; display: flex; gap: 8px;">
+            <i class="ph ph-apple-logo"></i>
+            <i class="ph ph-credit-card"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay">
+      <div class="cart-drawer">
+        <div class="cart-header">
+          <h3 style="margin: 0; font-size: var(--font-size-xl);">سلة المشتريات (<span class="cart-badge" style="position:static; display:inline-block; font-size: 14px; width:24px; height:24px;">3</span>)</h3>
+          <button class="cart-close icon-btn" id="cart-close" style="box-shadow:none;"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="cart-body">
+          <div style="display: flex; gap: var(--space-4); margin-bottom: var(--space-4); padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-border-light);">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" style="width: 80px; height: 80px; border-radius: var(--radius-sm); object-fit: cover;">
+            <div style="flex:1;">
+              <h4 style="font-size: var(--font-size-sm); margin-bottom: 4px;">سماعات سوني لاسلكية</h4>
+              <div class="text-brand" style="font-weight: 700; margin-bottom: 8px;">350 ر.س</div>
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="border: 1px solid var(--color-border); border-radius: 4px; display: inline-flex;">
+                  <button style="padding: 2px 8px;">-</button>
+                  <span style="padding: 2px 12px; font-weight: 600;">1</span>
+                  <button style="padding: 2px 8px;">+</button>
+                </div>
+                <button class="text-danger" style="font-size: var(--font-size-sm); text-decoration: underline;">إزالة</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-4); font-size: var(--font-size-lg); font-weight: 700;">
+            <span>المجموع:</span>
+            <span>350 ر.س</span>
+          </div>
+          <p class="text-muted" style="font-size: var(--font-size-sm); text-align: center;">الشحن والضرائب تُحسب عند إتمام الطلب.</p>
+          <button class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-2);">إتمام الطلب <i class="ph ph-check-circle" style="margin-right: 8px;"></i></button>
+          <button class="btn btn-outline-dark" style="width: 100%;">متابعة التسوق</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- VIEW 2: DESIGN MOCKUPS SHOWCASE -->
+  <main id="view-showcase" class="view-mode">
+    <div class="mockup-gallery">
+      <div class="container" style="max-width: 1000px;">
+        <h2 class="text-center" style="margin-bottom: var(--space-4);">استعراض نماذج التصميم المبدئية</h2>
+        <p class="text-center text-muted" style="margin-bottom: var(--space-12);">هذه النماذج عالية الدقة تم توليدها لتوضيح هوية الثيم واتجاه التصميم (Design Direction) قبل برمجتها.</p>
+        
+        <div class="mockup-item">
+          <img src="assets/images/zid_hero_mockup_1780591489436.png" alt="Hero Mockup" onerror="this.src='https://via.placeholder.com/1440x800?text=Hero+Mockup+Not+Found'">
+        </div>
+        <div class="mockup-item">
+          <img src="assets/images/zid_categories_mockup_1780591554404.png" alt="Categories Mockup" onerror="this.src='https://via.placeholder.com/1440x800?text=Categories+Mockup+Not+Found'">
+        </div>
+        <div class="mockup-item">
+          <img src="assets/images/zid_products_mockup_1780591563988.png" alt="Products Mockup" onerror="this.src='https://via.placeholder.com/1440x800?text=Products+Mockup+Not+Found'">
+        </div>
+        <div class="mockup-item" style="background: #111827; padding: 40px; text-align: center;">
+          <h3 style="color: white; margin-bottom: 20px;">تصميم واجهة الهاتف (Mobile View)</h3>
+          <img src="assets/images/zid_mobile_mockup_1780591579388.png" alt="Mobile Mockup" style="max-width: 800px; display: inline-block;" onerror="this.src='https://via.placeholder.com/800x600?text=Mobile+Mockup+Not+Found'">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
