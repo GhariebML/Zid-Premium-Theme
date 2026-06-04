@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/theme.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
@@ -50,9 +51,9 @@
   <main>
     <!-- Page Hero Banner -->
     <section class="hero" style="height: 400px; min-height: 400px;">
-      <div class="hero-bg" style="background: linear-gradient(to right, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.5) 100%), url('https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
+      <div class="hero-bg parallax-bg" style="background: linear-gradient(to right, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.5) 100%), url('https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
       <div class="container relative z-10">
-        <div class="hero-content animate-fade-up">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
           <h1 class="hero-title text-gradient">تقنيات الغد، بين يديك اليوم</h1>
           <p class="hero-subtitle">أحدث الأجهزة الذكية والملحقات التقنية بأفضل الأسعار المضمونة.</p>
         </div>
@@ -62,8 +63,8 @@
     <!-- Electronics Products -->
     <section class="section-padding bg-section">
       <div class="container">
-        <h2 class="section-title text-center animate-on-scroll">أجهزة ذكية متطورة</h2>
-        <div class="product-grid animate-on-scroll delay-100">
+        <h2 class="section-title text-center" data-aos="fade-up">أجهزة ذكية متطورة</h2>
+        <div class="product-grid" data-aos="fade-up" data-aos-delay="100">
           
           <div class="product-card">
             <div class="product-image-wrap">
@@ -133,7 +134,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
+        <div data-aos="fade-up">
           <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-4);">LUXE STORE</h3>
           <p class="text-muted" style="margin-bottom: var(--space-6);">الوجهة الأولى للتسوق الإلكتروني في الشرق الأوسط.</p>
         </div>
@@ -145,6 +146,7 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/theme.js"></script>
 </body>
 </html>

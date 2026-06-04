@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/theme.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <!-- Icons (Phosphor Icons for a clean, premium look) -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -169,31 +171,28 @@
 
     <!-- 3. Hero Banner -->
     <section class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-bg parallax-bg" style="background: linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;"></div>
       <div class="container relative z-10">
-        <div class="hero-content animate-fade-up">
-          <h1 class="hero-title">تسوق بأسلوب<br>مختلف ومميز</h1>
-          <p class="hero-subtitle">أحدث التصاميم العالمية وأفضل الإلكترونيات بأسعار استثنائية وتجربة تسوق لا تُنسى.</p>
-          <div class="hero-actions">
-            <button class="btn btn-primary hover-scale">تسوق الآن <i class="ph ph-arrow-left" style="margin-right: 8px;"></i></button>
-            <button class="btn btn-outline hover-scale" style="border-color: white; color: white;">اكتشف المجموعة</button>
-          </div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+          <h1 class="hero-title text-gradient">اكتشف أسلوبك الخاص <br> مع تشكيلتنا الحصرية</h1>
+          <p class="hero-subtitle">نقدم لك أرقى الماركات العالمية بتصاميم تناسب ذوقك الرفيع.</p>
+          <button class="btn btn-primary ripple-btn" style="border-radius: 30px; font-weight: 600;">تسوق الآن <i class="ph ph-arrow-left"></i></button>
         </div>
       </div>
     </section>
 
     <!-- 4. Brand Logos (NEW) -->
     <section class="section-padding bg-white border-bottom" style="border-bottom: 1px solid var(--color-border-light);">
-      <div class="container animate-on-scroll">
+      <div class="container" data-aos="fade-up">
         <p class="text-center text-muted" style="font-weight: 600; margin-bottom: var(--space-6);">نثق بأفضل العلامات التجارية العالمية</p>
         <div class="brand-logos">
           <!-- Placeholder Logos using simple shapes/text since actual SVGs would be too long -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Brand 1">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Brand 2">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Brand 3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Brand 4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Brand 5">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" alt="Brand 6">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Brand 1" data-aos="zoom-in" data-aos-delay="0">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Brand 2" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Brand 3" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Brand 4" data-aos="zoom-in" data-aos-delay="300">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Brand 5" data-aos="zoom-in" data-aos-delay="400">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" alt="Brand 6" data-aos="zoom-in" data-aos-delay="500">
         </div>
       </div>
     </section>
@@ -201,8 +200,8 @@
     <!-- 5. Featured Categories -->
     <section class="section-padding bg-section">
       <div class="container">
-        <h2 class="section-title text-center animate-on-scroll">تسوق حسب الفئة</h2>
-        <div class="bento-grid animate-on-scroll delay-100">
+        <h2 class="section-title text-center" data-aos="fade-up">تسوق حسب الفئة</h2>
+        <div class="bento-grid" data-aos="fade-up" data-aos-delay="100">
           <div class="bento-item bento-large-1">
             <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics">
             <div class="bento-overlay">
@@ -233,22 +232,22 @@
       </div>
     </section>
 
-    <!-- 5. Flash Sale -->
-    <section class="section-padding bg-dark text-white">
-      <div class="container">
-        <div class="flash-sale-header animate-on-scroll">
+    <!-- 6. Flash Sale -->
+    <section class="section-padding flash-sale parallax-bg" style="background: linear-gradient(to right, rgba(220, 38, 38, 0.9) 0%, rgba(245, 158, 11, 0.9) 100%); position: relative; overflow: hidden;">
+      <div class="container relative z-10" data-aos="zoom-in">
+        <div class="flash-sale-header">
           <div>
-            <h2 class="section-title" style="margin-bottom: 0;">عروض اليوم ⚡</h2>
-            <p class="text-muted" style="margin-top: 8px;">تنتهي العروض خلال:</p>
+            <h2 class="section-title text-white">عروض حصرية</h2>
+            <p class="text-white opacity-80" style="color: rgba(255,255,255,0.8);">ينتهي العرض قريباً، تسوق الآن!</p>
           </div>
           <div class="countdown">
-            <div class="time-box">00</div>
-            <div class="time-box">00</div>
-            <div class="time-box">00</div>
+            <div class="time-box">12</div><span class="text-white">:</span>
+            <div class="time-box">45</div><span class="text-white">:</span>
+            <div class="time-box">30</div>
           </div>
         </div>
         
-        <div class="product-grid animate-on-scroll delay-100">
+        <div class="product-grid" data-aos="fade-up" data-aos-delay="100">
           <!-- Product 1 -->
           <div class="product-card">
             <div class="product-badge">%30 خصم</div>
@@ -324,19 +323,11 @@
       </div>
     </section>
 
-    <!-- 6. Best Sellers -->
+    <!-- 7. Featured Products -->
     <section class="section-padding bg-white">
       <div class="container">
-        <h2 class="section-title text-center animate-on-scroll">الأكثر مبيعاً</h2>
-        
-        <div class="filter-tabs animate-on-scroll">
-          <button class="filter-tab active" data-filter="all">الكل</button>
-          <button class="filter-tab" data-filter="electronics">إلكترونيات</button>
-          <button class="filter-tab" data-filter="clothes">ملابس</button>
-          <button class="filter-tab" data-filter="shoes">أحذية</button>
-        </div>
-
-        <div class="product-grid" id="best-sellers">
+        <h2 class="section-title text-center" data-aos="fade-up">وصل حديثاً</h2>
+        <div class="product-grid" data-aos="fade-up" data-aos-delay="100">
           <!-- Item 1 (Electronics) -->
           <div class="product-card" data-category="electronics">
             <div class="product-image-wrap">
@@ -397,18 +388,19 @@
             <div class="product-rating">⭐⭐⭐⭐☆ (77)</div>
             <h3 class="product-title">ساعة ذكية سيريس 8</h3>
             <div class="product-price">
-              <span class="price-current">1,499 ر.س</span>
+              <span class="price-current">450 ر.س</span>
+              <span class="price-old">560 ر.س</span>
             </div>
-            <button class="btn btn-add-cart">أضف للسلة <i class="ph ph-plus"></i></button>
+            <button class="btn btn-add-cart ripple-btn">أضف للسلة <i class="ph ph-plus"></i></button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7. Promo Banner -->
-    <section class="section-padding bg-white">
-      <div class="container animate-on-scroll">
-        <div class="promo-banner">
+    <!-- 8. Promotional Banner -->
+    <section class="section-padding">
+      <div class="container" data-aos="zoom-in-up">
+        <div class="promo-banner parallax-bg">
           <div class="promo-content">
             <h2 class="hero-title" style="font-size: var(--font-size-4xl);">أضف لمسة الأناقة<br>إلى حياتك اليومية</h2>
             <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-6); opacity: 0.9;">
@@ -423,28 +415,36 @@
       </div>
     </section>
 
-    <!-- 9. Why Choose Us -->
+    <!-- 9. Why Choose Us (With Lottie Animations) -->
     <section class="section-padding bg-section">
       <div class="container">
-        <h2 class="section-title text-center animate-on-scroll">لماذا تتسوق معنا؟</h2>
-        <div class="features-grid animate-on-scroll delay-100">
+        <h2 class="section-title text-center" data-aos="fade-up">لماذا تتسوق معنا؟</h2>
+        <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
           <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
-            <div class="feature-icon"><i class="ph ph-truck"></i></div>
+            <div class="feature-icon" style="height: 64px; margin-bottom: 16px;">
+              <lottie-player src="https://lottie.host/8040d6e2-e1c3-4d76-bc39-a0352ef2049b/wXgL1U1t1D.json" background="transparent" speed="1" style="width: 100%; height: 100%;" hover autoplay></lottie-player>
+            </div>
             <h3>شحن سريع</h3>
             <p class="text-muted">توصيل خلال 24 ساعة لجميع مناطق المملكة.</p>
           </div>
           <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
-            <div class="feature-icon"><i class="ph ph-arrows-clockwise"></i></div>
+            <div class="feature-icon" style="height: 64px; margin-bottom: 16px;">
+              <lottie-player src="https://lottie.host/17e57c86-1bd1-4f81-8b01-5cc7a8d795b5/nL8sEwMh19.json" background="transparent" speed="1" style="width: 100%; height: 100%;" hover autoplay></lottie-player>
+            </div>
             <h3>إرجاع مجاني</h3>
             <p class="text-muted">استرجاع مجاني وسهل خلال 14 يوماً من الاستلام.</p>
           </div>
           <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
-            <div class="feature-icon"><i class="ph ph-shield-check"></i></div>
+            <div class="feature-icon" style="height: 64px; margin-bottom: 16px;">
+              <lottie-player src="https://lottie.host/5b17a02c-47fc-4e67-882f-870fdbfc6d9f/Yg222jM21b.json" background="transparent" speed="1" style="width: 100%; height: 100%;" hover autoplay></lottie-player>
+            </div>
             <h3>دفع آمن 100%</h3>
             <p class="text-muted">مدفوعاتك محمية بأحدث تقنيات التشفير.</p>
           </div>
           <div class="feature-card hover-lift" style="background: var(--color-bg); padding: var(--space-8); border-radius: var(--radius-lg);">
-            <div class="feature-icon"><i class="ph ph-headset"></i></div>
+            <div class="feature-icon" style="height: 64px; margin-bottom: 16px;">
+              <lottie-player src="https://lottie.host/9e414c2b-b6d8-4f8c-a496-ec6190ecf85d/R7E1kH6X2u.json" background="transparent" speed="1" style="width: 100%; height: 100%;" hover autoplay></lottie-player>
+            </div>
             <h3>دعم فني 24/7</h3>
             <p class="text-muted">فريقنا متواجد دائماً لخدمتك والرد على استفساراتك.</p>
           </div>
@@ -455,9 +455,9 @@
     <!-- 10. Customer Reviews (NEW) -->
     <section class="section-padding bg-white">
       <div class="container">
-        <h2 class="section-title text-center animate-on-scroll">آراء عملائنا المميزين</h2>
-        <div class="reviews-grid animate-on-scroll delay-100">
-          <div class="review-card hover-lift">
+        <h2 class="section-title text-center" data-aos="fade-up">آراء عملائنا المميزين</h2>
+        <div class="reviews-grid">
+          <div class="review-card hover-lift" data-aos="flip-left" data-aos-delay="0">
             <div class="review-stars">⭐⭐⭐⭐⭐</div>
             <p class="review-text">"تجربة تسوق أكثر من رائعة! جودة المنتجات ممتازة والتوصيل كان أسرع مما توقعت. التغليف كان فاخراً جداً."</p>
             <p class="review-author">— أحمد محمد</p>
@@ -467,7 +467,7 @@
             <p class="review-text">"هذا هو متجري المفضل الآن. خدمة العملاء متجاوبة جداً وتصميم الموقع يجعل عملية الشراء سهلة وممتعة."</p>
             <p class="review-author">— سارة عبدالرحمن</p>
           </div>
-          <div class="review-card hover-lift">
+          <div class="review-card hover-lift" data-aos="flip-left" data-aos-delay="200">
             <div class="review-stars">⭐⭐⭐⭐☆</div>
             <p class="review-text">"حصلت على المنتجات مطابقة تماماً للوصف والصور. الخصومات في المتجر حقيقية والتجربة ممتازة بشكل عام."</p>
             <p class="review-author">— فهد العتيبي</p>
@@ -478,8 +478,8 @@
 
     <!-- 11. Instagram Gallery (NEW) -->
     <section class="section-padding" style="padding-bottom: 0;">
-      <h2 class="section-title text-center animate-on-scroll">تابعنا على إنستغرام</h2>
-      <div class="insta-grid animate-on-scroll delay-100">
+      <h2 class="section-title text-center" data-aos="fade-up">تابعنا على إنستغرام</h2>
+      <div class="insta-grid" data-aos="fade-up" data-aos-delay="100">
         <div class="insta-item">
           <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instagram 1">
           <div class="insta-overlay"><i class="ph ph-instagram-logo"></i></div>
@@ -637,6 +637,10 @@
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/theme.js"></script>
 </body>
 </html>

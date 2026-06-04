@@ -268,16 +268,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Scroll Animations (Intersection Observer)
-  const animateElements = document.querySelectorAll('.animate-on-scroll');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fade-up');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+  // --- NEW: Animation & Micro-interactions ---
 
-  animateElements.forEach(el => observer.observe(el));
+  // Initialize AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      once: true,
+      offset: 100,
+      duration: 600,
+      easing: 'ease-out-cubic',
+    });
+  }
+
+  // Parallax Effect for Backgrounds
+  const parallaxBgs = document.querySelectorAll('.parallax-bg');
+  window.addEventListener('scroll', () => {
+    let scrollPosition = window.pageYOffset;
+    parallaxBgs.forEach(bg => {
+      bg.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
+    });
+  });
+
+  // Ripple Effect for Buttons
+  const rippleBtns = document.querySelectorAll('.ripple-btn');
+  rippleBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      let x = e.clientX - e.target.getBoundingClientRect().left;
+      let y = e.clientY - e.target.getBoundingClientRect().top;
+      
+      let ripples = document.createElement('span');
+      ripples.style.left = x + 'px';
+      ripples.style.top = y + 'px';
+      ripples.style.position = 'absolute';
+      ripples.style.background = 'rgba(255, 255, 255, 0.4)';
+      ripples.style.transform = 'translate(-50%, -50%)';
+      ripples.style.pointerEvents = 'none';
+      ripples.style.borderRadius = '50%';
+      ripples.style.animation = 'ripple-anim 0.6s linear';
+      
+      this.style.position = 'relative';
+      this.style.overflow = 'hidden';
+      this.appendChild(ripples);
+      
+      setTimeout(() => {
+        ripples.remove();
+      }, 600);
+    });
+  });
+
+  // Inject Ripple CSS Keyframes
+  const style = document.createElement('style');
+  style.innerHTML = `
+    @keyframes ripple-anim {
+      0% { width: 0; height: 0; opacity: 1; }
+      100% { width: 300px; height: 300px; opacity: 0; }
+    }
+  `;
+  document.head.appendChild(style);
+
 });
